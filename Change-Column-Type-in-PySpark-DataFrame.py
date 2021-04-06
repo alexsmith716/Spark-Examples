@@ -37,7 +37,7 @@ df1 = df.withColumn('Str_Col1', lit('1')).withColumn('Str_Col2', lit('2021-04-04
 # change column types using cast function
 # function DataFrame.cast can be used to convert data types
 df1 = df1.withColumn("Str_Col1_Int", df1['Str_Col1'].cast('int')).drop('Str_Col1') \
-    .withColumn('Str_Col2_Date', df1['Str_Col2'].cast(DateType())).drop('Str_Col2')
+	.withColumn('Str_Col2_Date', df1['Str_Col2'].cast(DateType())).drop('Str_Col2')
 df1.show()
 print(df1.schema)
 
